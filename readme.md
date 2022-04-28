@@ -18,3 +18,15 @@ It is composed of:
 - Order service
 - Payment service
 - Mobile service (frontend)
+
+## Requirements
+
+- Go 1.18+
+
+## Instructions
+
+### Generate Proto
+
+```bash
+cd proto && make gen
+```
