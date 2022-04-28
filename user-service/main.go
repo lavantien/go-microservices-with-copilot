@@ -1,13 +1,13 @@
-package user
+package main
 
 import (
-	"log"
-
-	common "github.com/lavantien/go-microservices-with-copilot/common"
+	"github.com/lavantien/go-microservices-with-copilot/common/logger"
 )
 
-func main() {
-	logger := common.NewLogger(log.Logger)
+const serviceName = "user-service"
 
-	logger.Println("Starting user service...")
+func main() {
+	logger := logger.NewLogger(serviceName)
+
+	logger.Info("main()", "starting user service")
 }

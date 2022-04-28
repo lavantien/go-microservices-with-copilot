@@ -13,8 +13,8 @@ It is composed of:
 - Proto service
 - Common service: Logger, Auth, Random
 - User service
-- Order service
 - Product service
-- Payment service
 - Cart service
+- Order service
+- Payment service
 - Mobile service (frontend)
