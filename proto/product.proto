@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = ".;pb";
+
+message Product {
+  string id = 1;
+  string name = 2;
+  int64 price = 3;
+}
+
+service ProductService {
+  rpc CreateProduct(CreateProductRequest) returns (CreateProductResponse) {}
+  rpc ReadProduct(ReadProductRequest) returns (ReadProductResponse) {}
+  rpc UpdateProduct(UpdateProductRequest) returns (UpdateProductResponse) {}
+  rpc DeleteProduct(DeleteProductRequest) returns (DeleteProductResponse) {}
+  rpc ListProducts(ListProductsRequest) returns (ListProductsResponse) {}
+}
+
+message ListProductsRequest {
+}
+
+message ListProductsResponse {
+  repeated Product products = 1;
+}
+
+message CreateProductRequest {
+  Product product = 1;
+}
+
+message CreateProductResponse {
+  string id = 1;
+}
+
+message ReadProductRequest {
+  string id = 1;
+}
+
+message ReadProductResponse {
+  Product product = 1;
+}
+
+message UpdateProductRequest {
+  string id = 1;
+  Product product = 2;
+}
+
+message UpdateProductResponse {
+  string id = 1;
+}
+
+message DeleteProductRequest {
+  string id = 1;
+}
+
+message DeleteProductResponse {
+}

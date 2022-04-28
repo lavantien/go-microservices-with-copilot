@@ -1,0 +1,70 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = ".;pb";
+
+message Payment {
+  string id = 1;
+  string user_id = 2;
+  string order_id = 3;
+  int64 amount = 4;
+  PaymentStatus status = 5;
+}
+
+enum PaymentStatus {
+  PAYMENT_STATUS_UNSPECIFIED = 0;
+  PAYMENT_STATUS_PENDING = 1;
+  PAYMENT_STATUS_PAID = 2;
+  PAYMENT_STATUS_REFUNDED = 3;
+}
+
+service PaymentService {
+  rpc CreatePayment(CreatePaymentRequest) returns (CreatePaymentResponse) {}
+  rpc ReadPayment(ReadPaymentRequest) returns (ReadPaymentResponse) {}
+  rpc UpdatePayment(UpdatePaymentRequest) returns (UpdatePaymentResponse) {}
+  rpc DeletePayment(DeletePaymentRequest) returns (DeletePaymentResponse) {}
+  rpc ListPaymentsOfUser(ListPaymentsOfUserRequest)
+      returns (ListPaymentsOfUserResponse) {}
+}
+
+message ListPaymentsOfUserRequest {
+  string user_id = 1;
+}
+
+message ListPaymentsOfUserResponse {
+  repeated Payment payments = 1;
+}
+
+message CreatePaymentRequest {
+  Payment payment = 1;
+}
+
+message CreatePaymentResponse {
+  string id = 1;
+}
+
+message ReadPaymentRequest {
+  string id = 1;
+}
+
+message ReadPaymentResponse {
+  Payment payment = 1;
+}
+
+message UpdatePaymentRequest {
+  string id = 1;
+  Payment payment = 2;
+}
+
+message UpdatePaymentResponse {
+  string id = 1;
+}
+
+message DeletePaymentRequest {
+  string id = 1;
+}
+
+message DeletePaymentResponse {
+  string id = 1;
+}

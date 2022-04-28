@@ -1,0 +1,72 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = ".;pb";
+
+message Order {
+  string id = 1;
+  string user_id = 2;
+  string cart_id = 3;
+  OrderStatus status = 4;
+  string created_at = 5;
+  string updated_at = 6;
+}
+
+enum OrderStatus {
+  ORDER_STATUS_UNSPECIFIED = 0;
+  ORDER_STATUS_PENDING = 1;
+  ORDER_STATUS_PAID = 2;
+  ORDER_STATUS_SHIPPED = 3;
+  ORDER_STATUS_DELIVERED = 4;
+  ORDER_STATUS_CANCELLED = 5;
+}
+
+service OrderService {
+  rpc CreateOrder(CreateOrderRequest) returns (CreateOrderResponse) {}
+  rpc ReadOrder(ReadOrderRequest) returns (ReadOrderResponse) {}
+  rpc UpdateOrder(UpdateOrderRequest) returns (UpdateOrderResponse) {}
+  rpc DeleteOrder(DeleteOrderRequest) returns (DeleteOrderResponse) {}
+  rpc ListOrdersOfUser(ListOrdersOfUserRequest)
+      returns (ListOrdersOfUserResponse) {}
+}
+
+message ListOrdersOfUserRequest {
+  string user_id = 1;
+}
+
+message ListOrdersOfUserResponse {
+  repeated Order orders = 1;
+}
+
+message CreateOrderRequest {
+  Order order = 1;
+}
+
+message CreateOrderResponse {
+  Order order = 1;
+}
+
+message ReadOrderRequest {
+  string id = 1;
+}
+
+message ReadOrderResponse {
+  Order order = 1;
+}
+
+message UpdateOrderRequest {
+  Order order = 1;
+}
+
+message UpdateOrderResponse {
+  Order order = 1;
+}
+
+message DeleteOrderRequest {
+  string id = 1;
+}
+
+message DeleteOrderResponse {
+  string id = 1;
+}

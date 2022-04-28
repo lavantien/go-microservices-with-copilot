@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = ".;pb";
+
+message Cart {
+  string id = 1;
+  string user_id = 2;
+  repeated Item items = 3;
+}
+
+message Item {
+  string product_id = 1;
+  int64 quantity = 2;
+}
+
+service CartService {
+  rpc GetCart(GetCartRequest) returns (GetCartResponse) {}
+  rpc AddToCart(AddToCartRequest) returns (AddToCartResponse) {}
+  rpc RemoveFromCart(RemoveFromCartRequest) returns (RemoveFromCartResponse) {}
+  rpc ListCartsOfUser(ListCartsOfUserRequest)
+      returns (ListCartsOfUserResponse) {}
+}
+
+message ListCartsOfUserRequest {
+  string user_id = 1;
+}
+
+message ListCartsOfUserResponse {
+  repeated Cart carts = 1;
+}
+
+message GetCartRequest {
+  string user_id = 1;
+}
+
+message GetCartResponse {
+  Cart cart = 1;
+}
+
+message AddToCartRequest {
+  string user_id = 1;
+  Item item = 2;
+}
+
+message AddToCartResponse {
+  bool success = 1;
+}
+
+message RemoveFromCartRequest {
+  string user_id = 1;
+  string product_id = 2;
+}
+
+message RemoveFromCartResponse {
+  bool success = 1;
+}

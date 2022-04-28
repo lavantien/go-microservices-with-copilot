@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = ".;pb";
+
+message Mobile {
+  string id = 1;
+  string text = 2;
+}
+
+service MobileService {
+  rpc TestMobileService(TestMobileServiceRequest)
+      returns (TestMobileServiceResponse) {}
+}
+
+message TestMobileServiceRequest {
+  Mobile mobile = 1;
+}
+
+message TestMobileServiceResponse {
+  Mobile mobile = 1;
+}

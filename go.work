@@ -1,6 +1,7 @@
 go 1.18
 
 use (
+	./proto
 	./user-service
 	./order-service
 	./product-service
