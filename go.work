@@ -1,0 +1,10 @@
+go 1.18
+
+use (
+	./user-service
+	./order-service
+	./product-service
+	./payment-service
+	./cart-service
+	./mobile-service
+)
