@@ -12,7 +12,7 @@ It is composed of:
 
 - Proto
 - Common: *Logger, Auth, Random*
-- Mobile client
+- UI client: *cross-platform Web, Mobile, Desktop*
 
 ---
 
