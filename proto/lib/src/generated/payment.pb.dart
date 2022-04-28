@@ -21,6 +21,7 @@ class Payment extends $pb.GeneratedMessage {
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'orderId')
     ..aInt64(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'amount')
     ..e<PaymentStatus>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: PaymentStatus.PAYMENT_STATUS_UNSPECIFIED, valueOf: PaymentStatus.valueOf, enumValues: PaymentStatus.values)
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'paymentDate')
     ..hasRequiredFields = false
   ;
 
@@ -31,6 +32,7 @@ class Payment extends $pb.GeneratedMessage {
     $core.String? orderId,
     $fixnum.Int64? amount,
     PaymentStatus? status,
+    $core.String? paymentDate,
   }) {
     final _result = create();
     if (id != null) {
@@ -47,6 +49,9 @@ class Payment extends $pb.GeneratedMessage {
     }
     if (status != null) {
       _result.status = status;
+    }
+    if (paymentDate != null) {
+      _result.paymentDate = paymentDate;
     }
     return _result;
   }
@@ -115,6 +120,15 @@ class Payment extends $pb.GeneratedMessage {
   $core.bool hasStatus() => $_has(4);
   @$pb.TagNumber(5)
   void clearStatus() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get paymentDate => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set paymentDate($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasPaymentDate() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearPaymentDate() => clearField(6);
 }
 
 class ListPaymentsOfUserRequest extends $pb.GeneratedMessage {

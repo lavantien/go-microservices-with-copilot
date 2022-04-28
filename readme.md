@@ -61,3 +61,11 @@ It is composed of:
 ```bash
 cd proto && make gen
 ```
+
+### Run UI Client
+
+```bash
+cd ui_client && flutter run -d linux
+
+flutter run -d chrome
+```

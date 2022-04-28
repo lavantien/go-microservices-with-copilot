@@ -30,11 +30,12 @@ const Payment$json = const {
     const {'1': 'order_id', '3': 3, '4': 1, '5': 9, '10': 'orderId'},
     const {'1': 'amount', '3': 4, '4': 1, '5': 3, '10': 'amount'},
     const {'1': 'status', '3': 5, '4': 1, '5': 14, '6': '.pb.PaymentStatus', '10': 'status'},
+    const {'1': 'payment_date', '3': 6, '4': 1, '5': 9, '10': 'paymentDate'},
   ],
 };
 
 /// Descriptor for `Payment`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List paymentDescriptor = $convert.base64Decode('CgdQYXltZW50Eg4KAmlkGAEgASgJUgJpZBIXCgd1c2VyX2lkGAIgASgJUgZ1c2VySWQSGQoIb3JkZXJfaWQYAyABKAlSB29yZGVySWQSFgoGYW1vdW50GAQgASgDUgZhbW91bnQSKQoGc3RhdHVzGAUgASgOMhEucGIuUGF5bWVudFN0YXR1c1IGc3RhdHVz');
+final $typed_data.Uint8List paymentDescriptor = $convert.base64Decode('CgdQYXltZW50Eg4KAmlkGAEgASgJUgJpZBIXCgd1c2VyX2lkGAIgASgJUgZ1c2VySWQSGQoIb3JkZXJfaWQYAyABKAlSB29yZGVySWQSFgoGYW1vdW50GAQgASgDUgZhbW91bnQSKQoGc3RhdHVzGAUgASgOMhEucGIuUGF5bWVudFN0YXR1c1IGc3RhdHVzEiEKDHBheW1lbnRfZGF0ZRgGIAEoCVILcGF5bWVudERhdGU=');
 @$core.Deprecated('Use listPaymentsOfUserRequestDescriptor instead')
 const ListPaymentsOfUserRequest$json = const {
   '1': 'ListPaymentsOfUserRequest',
