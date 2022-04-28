@@ -13,23 +13,37 @@ It is composed of:
 - Proto
 - Common: *Logger, Auth, Random*
 - UI client: *cross-platform Web, Mobile, Desktop*
+
 ![UI UML](proto/dot/generated/ui.dot.png?raw=true "UI UML")
 
 ---
 
 - User service
+
 ![User UML](proto/dot/generated/user.dot.png?raw=true "User UML")
+
 - Product service
+
 ![Product UML](proto/dot/generated/product.dot.png?raw=true "Product UML")
+
 - Inventory service
+
 ![Inventory UML](proto/dot/generated/inventory.dot.png?raw=true "Inventory UML")
+
 - Cart service
+
 ![Cart UML](proto/dot/generated/cart.dot.png?raw=true "Cart UML")
+
 - Order service
+
 ![Order UML](proto/dot/generated/order.dot.png?raw=true "Order UML")
+
 - Payment service
+
 ![Payment UML](proto/dot/generated/payment.dot.png?raw=true "Payment UML")
+
 - Delivery service
+
 ![Delivery UML](proto/dot/generated/delivery.dot.png?raw=true "Delivery UML")
 
 ## Requirements
