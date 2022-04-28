@@ -13,13 +13,13 @@ const User$json = const {
   '1': 'User',
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    const {'1': 'username', '3': 2, '4': 1, '5': 9, '10': 'username'},
+    const {'1': 'phonenumber', '3': 2, '4': 1, '5': 9, '10': 'phonenumber'},
     const {'1': 'password', '3': 3, '4': 1, '5': 9, '10': 'password'},
   ],
 };
 
 /// Descriptor for `User`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List userDescriptor = $convert.base64Decode('CgRVc2VyEg4KAmlkGAEgASgJUgJpZBIaCgh1c2VybmFtZRgCIAEoCVIIdXNlcm5hbWUSGgoIcGFzc3dvcmQYAyABKAlSCHBhc3N3b3Jk');
+final $typed_data.Uint8List userDescriptor = $convert.base64Decode('CgRVc2VyEg4KAmlkGAEgASgJUgJpZBIgCgtwaG9uZW51bWJlchgCIAEoCVILcGhvbmVudW1iZXISGgoIcGFzc3dvcmQYAyABKAlSCHBhc3N3b3Jk');
 @$core.Deprecated('Use listUsersRequestDescriptor instead')
 const ListUsersRequest$json = const {
   '1': 'ListUsersRequest',

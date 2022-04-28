@@ -27,8 +27,7 @@ service OrderService {
   rpc ReadOrder(ReadOrderRequest) returns (ReadOrderResponse) {}
   rpc UpdateOrder(UpdateOrderRequest) returns (UpdateOrderResponse) {}
   rpc DeleteOrder(DeleteOrderRequest) returns (DeleteOrderResponse) {}
-  rpc ListOrdersOfUser(ListOrdersOfUserRequest)
-      returns (ListOrdersOfUserResponse) {}
+  rpc ListOrdersOfUser(ListOrdersOfUserRequest) returns (ListOrdersOfUserResponse) {}
 }
 
 message ListOrdersOfUserRequest {

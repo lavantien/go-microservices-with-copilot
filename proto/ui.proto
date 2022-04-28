@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = ".;pb";
+
+message Ui {
+  string id = 1;
+  string text = 2;
+}
+
+service UiService {
+  rpc TestUiService(TestUiServiceRequest) returns (TestUiServiceResponse) {}
+}
+
+message TestUiServiceRequest {
+  Ui ui = 1;
+}
+
+message TestUiServiceResponse {
+  Ui ui = 1;
+}

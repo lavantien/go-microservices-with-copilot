@@ -7,5 +7,5 @@ const serviceName = "product-service"
 func main() {
 	logger := logger.NewLogger(serviceName)
 
-	logger.Info("main()", "starting product service")
+	logger.Info("main()", "starting", serviceName)
 }

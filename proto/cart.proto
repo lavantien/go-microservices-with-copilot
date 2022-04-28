@@ -7,10 +7,10 @@ option go_package = ".;pb";
 message Cart {
   string id = 1;
   string user_id = 2;
-  repeated Item items = 3;
+  repeated CartItem cart_items = 3;
 }
 
-message Item {
+message CartItem {
   string product_id = 1;
   int64 quantity = 2;
 }
@@ -19,8 +19,7 @@ service CartService {
   rpc GetCart(GetCartRequest) returns (GetCartResponse) {}
   rpc AddToCart(AddToCartRequest) returns (AddToCartResponse) {}
   rpc RemoveFromCart(RemoveFromCartRequest) returns (RemoveFromCartResponse) {}
-  rpc ListCartsOfUser(ListCartsOfUserRequest)
-      returns (ListCartsOfUserResponse) {}
+  rpc ListCartsOfUser(ListCartsOfUserRequest) returns (ListCartsOfUserResponse) {}
 }
 
 message ListCartsOfUserRequest {
@@ -41,7 +40,7 @@ message GetCartResponse {
 
 message AddToCartRequest {
   string user_id = 1;
-  Item item = 2;
+  CartItem cart_items = 2;
 }
 
 message AddToCartResponse {

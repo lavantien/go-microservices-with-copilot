@@ -14,7 +14,7 @@ class Cart extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Cart', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'pb'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'userId')
-    ..pc<Item>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'items', $pb.PbFieldType.PM, subBuilder: Item.create)
+    ..pc<CartItem>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cartItems', $pb.PbFieldType.PM, subBuilder: CartItem.create)
     ..hasRequiredFields = false
   ;
 
@@ -22,7 +22,7 @@ class Cart extends $pb.GeneratedMessage {
   factory Cart({
     $core.String? id,
     $core.String? userId,
-    $core.Iterable<Item>? items,
+    $core.Iterable<CartItem>? cartItems,
   }) {
     final _result = create();
     if (id != null) {
@@ -31,8 +31,8 @@ class Cart extends $pb.GeneratedMessage {
     if (userId != null) {
       _result.userId = userId;
     }
-    if (items != null) {
-      _result.items.addAll(items);
+    if (cartItems != null) {
+      _result.cartItems.addAll(cartItems);
     }
     return _result;
   }
@@ -76,18 +76,18 @@ class Cart extends $pb.GeneratedMessage {
   void clearUserId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.List<Item> get items => $_getList(2);
+  $core.List<CartItem> get cartItems => $_getList(2);
 }
 
-class Item extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Item', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'pb'), createEmptyInstance: create)
+class CartItem extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'CartItem', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'pb'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'productId')
     ..aInt64(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quantity')
     ..hasRequiredFields = false
   ;
 
-  Item._() : super();
-  factory Item({
+  CartItem._() : super();
+  factory CartItem({
     $core.String? productId,
     $fixnum.Int64? quantity,
   }) {
@@ -100,26 +100,26 @@ class Item extends $pb.GeneratedMessage {
     }
     return _result;
   }
-  factory Item.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Item.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  factory CartItem.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CartItem.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  Item clone() => Item()..mergeFromMessage(this);
+  CartItem clone() => CartItem()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  Item copyWith(void Function(Item) updates) => super.copyWith((message) => updates(message as Item)) as Item; // ignore: deprecated_member_use
+  CartItem copyWith(void Function(CartItem) updates) => super.copyWith((message) => updates(message as CartItem)) as CartItem; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
-  static Item create() => Item._();
-  Item createEmptyInstance() => create();
-  static $pb.PbList<Item> createRepeated() => $pb.PbList<Item>();
+  static CartItem create() => CartItem._();
+  CartItem createEmptyInstance() => create();
+  static $pb.PbList<CartItem> createRepeated() => $pb.PbList<CartItem>();
   @$core.pragma('dart2js:noInline')
-  static Item getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Item>(create);
-  static Item? _defaultInstance;
+  static CartItem getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CartItem>(create);
+  static CartItem? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get productId => $_getSZ(0);
@@ -327,21 +327,21 @@ class GetCartResponse extends $pb.GeneratedMessage {
 class AddToCartRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'AddToCartRequest', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'pb'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'userId')
-    ..aOM<Item>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'item', subBuilder: Item.create)
+    ..aOM<CartItem>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cartItems', subBuilder: CartItem.create)
     ..hasRequiredFields = false
   ;
 
   AddToCartRequest._() : super();
   factory AddToCartRequest({
     $core.String? userId,
-    Item? item,
+    CartItem? cartItems,
   }) {
     final _result = create();
     if (userId != null) {
       _result.userId = userId;
     }
-    if (item != null) {
-      _result.item = item;
+    if (cartItems != null) {
+      _result.cartItems = cartItems;
     }
     return _result;
   }
@@ -376,15 +376,15 @@ class AddToCartRequest extends $pb.GeneratedMessage {
   void clearUserId() => clearField(1);
 
   @$pb.TagNumber(2)
-  Item get item => $_getN(1);
+  CartItem get cartItems => $_getN(1);
   @$pb.TagNumber(2)
-  set item(Item v) { setField(2, v); }
+  set cartItems(CartItem v) { setField(2, v); }
   @$pb.TagNumber(2)
-  $core.bool hasItem() => $_has(1);
+  $core.bool hasCartItems() => $_has(1);
   @$pb.TagNumber(2)
-  void clearItem() => clearField(2);
+  void clearCartItems() => clearField(2);
   @$pb.TagNumber(2)
-  Item ensureItem() => $_ensure(1);
+  CartItem ensureCartItems() => $_ensure(1);
 }
 
 class AddToCartResponse extends $pb.GeneratedMessage {

@@ -6,7 +6,7 @@ option go_package = ".;pb";
 
 message User {
   string id = 1;
-  string username = 2;
+  string phonenumber = 2;
   string password = 3;
 }
 

@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = ".;pb";
+
+message Inventory {
+  string id = 1;
+  string product_id = 2;
+  int64 quantity = 3;
+}
+
+service InventoryService {
+  rpc CreateInventory(CreateInventoryRequest) returns (CreateInventoryResponse) {}
+  rpc ReadInventory(ReadInventoryRequest) returns (ReadInventoryResponse) {}
+  rpc UpdateInventory(UpdateInventoryRequest) returns (UpdateInventoryResponse) {}
+  rpc DeleteInventory(DeleteInventoryRequest) returns (DeleteInventoryResponse) {}
+  rpc ListInventories(ListInventoriesRequest) returns (ListInventoriesResponse) {}
+}
+
+message ListInventoriesRequest {
+}
+
+message ListInventoriesResponse {
+  repeated Inventory inventories = 1;
+}
+
+message CreateInventoryRequest {
+  Inventory inventory = 1;
+}
+
+message CreateInventoryResponse {
+  string id = 1;
+}
+
+message ReadInventoryRequest {
+  string id = 1;
+}
+
+message ReadInventoryResponse {
+  Inventory inventory = 1;
+}
+
+message UpdateInventoryRequest {
+  string id = 1;
+  Inventory inventory = 2;
+}
+
+message UpdateInventoryResponse {
+  string id = 1;
+}
+
+message DeleteInventoryRequest {
+  string id = 1;
+}
+
+message DeleteInventoryResponse {
+  string id = 1;
+}

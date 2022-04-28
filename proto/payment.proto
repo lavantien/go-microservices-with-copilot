@@ -24,8 +24,7 @@ service PaymentService {
   rpc ReadPayment(ReadPaymentRequest) returns (ReadPaymentResponse) {}
   rpc UpdatePayment(UpdatePaymentRequest) returns (UpdatePaymentResponse) {}
   rpc DeletePayment(DeletePaymentRequest) returns (DeletePaymentResponse) {}
-  rpc ListPaymentsOfUser(ListPaymentsOfUserRequest)
-      returns (ListPaymentsOfUserResponse) {}
+  rpc ListPaymentsOfUser(ListPaymentsOfUserRequest) returns (ListPaymentsOfUserResponse) {}
 }
 
 message ListPaymentsOfUserRequest {

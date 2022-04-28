@@ -14,23 +14,23 @@ const Cart$json = const {
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     const {'1': 'user_id', '3': 2, '4': 1, '5': 9, '10': 'userId'},
-    const {'1': 'items', '3': 3, '4': 3, '5': 11, '6': '.pb.Item', '10': 'items'},
+    const {'1': 'cart_items', '3': 3, '4': 3, '5': 11, '6': '.pb.CartItem', '10': 'cartItems'},
   ],
 };
 
 /// Descriptor for `Cart`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List cartDescriptor = $convert.base64Decode('CgRDYXJ0Eg4KAmlkGAEgASgJUgJpZBIXCgd1c2VyX2lkGAIgASgJUgZ1c2VySWQSHgoFaXRlbXMYAyADKAsyCC5wYi5JdGVtUgVpdGVtcw==');
-@$core.Deprecated('Use itemDescriptor instead')
-const Item$json = const {
-  '1': 'Item',
+final $typed_data.Uint8List cartDescriptor = $convert.base64Decode('CgRDYXJ0Eg4KAmlkGAEgASgJUgJpZBIXCgd1c2VyX2lkGAIgASgJUgZ1c2VySWQSKwoKY2FydF9pdGVtcxgDIAMoCzIMLnBiLkNhcnRJdGVtUgljYXJ0SXRlbXM=');
+@$core.Deprecated('Use cartItemDescriptor instead')
+const CartItem$json = const {
+  '1': 'CartItem',
   '2': const [
     const {'1': 'product_id', '3': 1, '4': 1, '5': 9, '10': 'productId'},
     const {'1': 'quantity', '3': 2, '4': 1, '5': 3, '10': 'quantity'},
   ],
 };
 
-/// Descriptor for `Item`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List itemDescriptor = $convert.base64Decode('CgRJdGVtEh0KCnByb2R1Y3RfaWQYASABKAlSCXByb2R1Y3RJZBIaCghxdWFudGl0eRgCIAEoA1IIcXVhbnRpdHk=');
+/// Descriptor for `CartItem`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List cartItemDescriptor = $convert.base64Decode('CghDYXJ0SXRlbRIdCgpwcm9kdWN0X2lkGAEgASgJUglwcm9kdWN0SWQSGgoIcXVhbnRpdHkYAiABKANSCHF1YW50aXR5');
 @$core.Deprecated('Use listCartsOfUserRequestDescriptor instead')
 const ListCartsOfUserRequest$json = const {
   '1': 'ListCartsOfUserRequest',
@@ -76,12 +76,12 @@ const AddToCartRequest$json = const {
   '1': 'AddToCartRequest',
   '2': const [
     const {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
-    const {'1': 'item', '3': 2, '4': 1, '5': 11, '6': '.pb.Item', '10': 'item'},
+    const {'1': 'cart_items', '3': 2, '4': 1, '5': 11, '6': '.pb.CartItem', '10': 'cartItems'},
   ],
 };
 
 /// Descriptor for `AddToCartRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List addToCartRequestDescriptor = $convert.base64Decode('ChBBZGRUb0NhcnRSZXF1ZXN0EhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZBIcCgRpdGVtGAIgASgLMggucGIuSXRlbVIEaXRlbQ==');
+final $typed_data.Uint8List addToCartRequestDescriptor = $convert.base64Decode('ChBBZGRUb0NhcnRSZXF1ZXN0EhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZBIrCgpjYXJ0X2l0ZW1zGAIgASgLMgwucGIuQ2FydEl0ZW1SCWNhcnRJdGVtcw==');
 @$core.Deprecated('Use addToCartResponseDescriptor instead')
 const AddToCartResponse$json = const {
   '1': 'AddToCartResponse',

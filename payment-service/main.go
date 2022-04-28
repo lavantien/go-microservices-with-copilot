@@ -7,5 +7,5 @@ const serviceName = "payment-service"
 func main() {
 	logger := logger.NewLogger(serviceName)
 
-	logger.Info("main()", "starting payment service")
+	logger.Info("main()", "starting", serviceName)
 }

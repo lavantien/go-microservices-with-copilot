@@ -1,0 +1,69 @@
+syntax = "proto3";
+
+package pb;
+
+option go_package = ".;pb";
+
+message Delivery {
+  string id = 1;
+  string user_id = 2;
+  string order_id = 3;
+  DeliveryStatus status = 4;
+  string delivery_date = 5;
+}
+
+enum DeliveryStatus {
+  DELIVERY_STATUS_UNSPECIFIED = 0;
+  DELIVERY_STATUS_DELIVERING = 1;
+  DELIVERY_STATUS_DELIVERED = 2;
+  DELIVERY_STATUS_CANCELLED = 3;
+}
+
+service DeliveryService {
+  rpc CreateDelivery(CreateDeliveryRequest) returns (CreateDeliveryResponse) {}
+  rpc ReadDelivery(ReadDeliveryRequest) returns (ReadDeliveryResponse) {}
+  rpc UpdateDelivery(UpdateDeliveryRequest) returns (UpdateDeliveryResponse) {}
+  rpc DeleteDelivery(DeleteDeliveryRequest) returns (DeleteDeliveryResponse) {}
+  rpc ListDeliveriesOfUser(ListDeliveriesRequest) returns (ListDeliveriesResponse) {}
+}
+
+message ListDeliveriesRequest {
+  string user_id = 1;
+}
+
+message ListDeliveriesResponse {
+  repeated Delivery deliveries = 1;
+}
+
+message CreateDeliveryRequest {
+  Delivery delivery = 1;
+}
+
+message CreateDeliveryResponse {
+  string id = 1;
+}
+
+message ReadDeliveryRequest {
+  string id = 1;
+}
+
+message ReadDeliveryResponse {
+  Delivery delivery = 1;
+}
+
+message UpdateDeliveryRequest {
+  string id = 1;
+  Delivery delivery = 2;
+}
+
+message UpdateDeliveryResponse {
+  string id = 1;
+}
+
+message DeleteDeliveryRequest {
+  string id = 1;
+}
+
+message DeleteDeliveryResponse {
+  string id = 1;
+}

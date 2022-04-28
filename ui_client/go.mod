@@ -1,4 +1,4 @@
-module github.com/lavantien/go-microservices-with-copilot/mobile-service
+module github.com/lavantien/go-microservices-with-copilot/ui_client
 
 go 1.18
 

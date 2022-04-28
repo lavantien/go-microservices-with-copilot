@@ -9,5 +9,5 @@ const serviceName = "user-service"
 func main() {
 	logger := logger.NewLogger(serviceName)
 
-	logger.Info("main()", "starting user service")
+	logger.Info("main()", "starting", serviceName)
 }

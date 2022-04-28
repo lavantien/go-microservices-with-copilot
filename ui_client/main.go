@@ -7,5 +7,5 @@ const serviceName = "ui_client"
 func main() {
 	logger := logger.NewLogger(serviceName)
 
-	logger.Info("main()", "starting ui client")
+	logger.Info("main()", "starting", serviceName)
 }

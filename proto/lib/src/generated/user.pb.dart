@@ -12,7 +12,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 class User extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'User', package: const $pb.PackageName(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'pb'), createEmptyInstance: create)
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
-    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'username')
+    ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'phonenumber')
     ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'password')
     ..hasRequiredFields = false
   ;
@@ -20,15 +20,15 @@ class User extends $pb.GeneratedMessage {
   User._() : super();
   factory User({
     $core.String? id,
-    $core.String? username,
+    $core.String? phonenumber,
     $core.String? password,
   }) {
     final _result = create();
     if (id != null) {
       _result.id = id;
     }
-    if (username != null) {
-      _result.username = username;
+    if (phonenumber != null) {
+      _result.phonenumber = phonenumber;
     }
     if (password != null) {
       _result.password = password;
@@ -66,13 +66,13 @@ class User extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get username => $_getSZ(1);
+  $core.String get phonenumber => $_getSZ(1);
   @$pb.TagNumber(2)
-  set username($core.String v) { $_setString(1, v); }
+  set phonenumber($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasUsername() => $_has(1);
+  $core.bool hasPhonenumber() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUsername() => clearField(2);
+  void clearPhonenumber() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.String get password => $_getSZ(2);

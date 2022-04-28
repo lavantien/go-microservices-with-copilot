@@ -1,0 +1,6 @@
+lint:
+  rules:
+    no_default: false
+
+    remove:
+      - MAX_LINE_LENGTH

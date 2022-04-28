@@ -4,9 +4,11 @@ use (
 	./proto
 	./common
 	./user-service
-	./order-service
 	./product-service
-	./payment-service
+	./inventory-service
 	./cart-service
+	./order-service
+	./payment-service
+	./delivery-service
 	./ui_client
 )
