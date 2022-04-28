@@ -8,5 +8,5 @@ use (
 	./product-service
 	./payment-service
 	./cart-service
-	./mobile-service
+	./ui_client
 )

@@ -10,18 +10,23 @@ The microservices will communicate via GRPC, each will have its own separated Mo
 
 It is composed of:
 
-- Proto service
-- Common service: Logger, Auth, Random
+- Proto
+- Common: *Logger, Auth, Random*
+- Mobile client
+
+---
+
 - User service
 - Product service
 - Cart service
 - Order service
 - Payment service
-- Mobile service (frontend)
 
 ## Requirements
 
 - Go 1.18+
+- Dart & Flutter
+- GRPC & Protobuf with Go & Dart plugins
 
 ## Instructions
 
@@ -29,4 +34,10 @@ It is composed of:
 
 ```bash
 cd proto && make gen
+```
+
+### Generate GRPC Mock
+
+```bash
+cd proto && make gen-mock
 ```
