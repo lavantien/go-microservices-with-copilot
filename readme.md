@@ -10,9 +10,11 @@ The microservices will communicate via GRPC, each will have its own separated Mo
 
 It is composed of:
 
+- Proto service
+- Common service: Logger, Auth, Random
 - User service
 - Order service
 - Product service
 - Payment service
 - Cart service
-- Mobile service
+- Mobile service (frontend)

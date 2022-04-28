@@ -1,4 +1,4 @@
-module proto
+module github.com/lavantien/go-microservices-with-copilot/proto
 
 go 1.18
 
