@@ -1,5 +1,7 @@
 # ui_client
 
+![gopherbadger-tag-do-not-edit]()
+
 A new Flutter project.
 
 ## Getting Started

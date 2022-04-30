@@ -4,6 +4,7 @@ go 1.18
 
 require (
 	github.com/golang/mock v1.6.0
+	github.com/lavantien/go-microservices-with-copilot/common v0.0.0-20220428212638-093bd25d7bd3
 	google.golang.org/grpc v1.46.0
 	google.golang.org/protobuf v1.28.0
 )

@@ -1,5 +1,7 @@
 # Go Microservices With Copilot
 
+<a href='https://github.com/jpoles1/gopherbadger' target='_blank'>![gopherbadger-tag-do-not-edit](https://img.shields.io/badge/Go%20Coverage-0%25-brightgreen.svg?longCache=true&style=flat)</a>
+
 ## Description
 
 This project demonstrate a microservices architecture using monorepo and GitHub Copilot assistance.

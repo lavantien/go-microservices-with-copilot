@@ -1,14 +1,14 @@
 go 1.18
 
 use (
-	./proto
-	./common
-	./user-service
-	./product-service
-	./inventory-service
 	./cart-service
+	./common
+	./delivery-service
+	./inventory-service
 	./order-service
 	./payment-service
-	./delivery-service
+	./product-service
+	./proto
 	./ui_client
+	./user-service
 )
