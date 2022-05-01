@@ -13,8 +13,8 @@ The microservices will communicate via GRPC, each will have its own separated Mo
 It is composed of:
 
 - Proto
-- Common: *Logger, Auth, Random*
-- UI client: *cross-platform Web, Mobile, Desktop*
+- Common: _Logger, Auth, Random_
+- UI client: _cross-platform Web, Mobile, Desktop_
 
 ![UI UML](proto/dot/generated/ui.dot.png?raw=true "UI UML")
 
@@ -55,6 +55,7 @@ It is composed of:
 - Dart & Flutter
 - GRPC & Protobuf with Go & Dart plugins
 - ProtoLint, ProtoDot, GraphViz
+- GolangCI-Lint, Trunk
 
 ## Instructions
 
