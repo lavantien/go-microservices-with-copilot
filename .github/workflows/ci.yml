@@ -21,3 +21,8 @@ jobs:
 
       - name: Test
         run: make test
+
+      - name: Run golangci-lint
+        uses: golangci/golangci-lint-action@v3
+        with:
+          working-directory: cart-service common delivery-service inventory-service order-service payment-service product-service proto ui_client user-service
