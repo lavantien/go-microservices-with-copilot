@@ -22,7 +22,52 @@ jobs:
       - name: Test
         run: make test
 
-      - name: Run golangci-lint
+      - name: Run golangci-lint on cart-service
         uses: golangci/golangci-lint-action@v3
         with:
-          working-directory: cart-service common delivery-service inventory-service order-service payment-service product-service proto ui_client user-service
+          working-directory: cart-service
+
+      - name: Run golangci-lint on common
+        uses: golangci/golangci-lint-action@v3
+        with:
+          working-directory: common
+
+      - name: Run golangci-lint on delivery-service
+        uses: golangci/golangci-lint-action@v3
+        with:
+          working-directory: delivery-service
+
+      - name: Run golangci-lint on inventory-service
+        uses: golangci/golangci-lint-action@v3
+        with:
+          working-directory: inventory-service
+
+      - name: Run golangci-lint on order-service
+        uses: golangci/golangci-lint-action@v3
+        with:
+          working-directory: order-service
+
+      - name: Run golangci-lint on payment-service
+        uses: golangci/golangci-lint-action@v3
+        with:
+          working-directory: payment-service
+
+      - name: Run golangci-lint on product-service
+        uses: golangci/golangci-lint-action@v3
+        with:
+          working-directory: product-service
+
+      - name: Run golangci-lint on proto
+        uses: golangci/golangci-lint-action@v3
+        with:
+          working-directory: proto
+
+      - name: Run golangci-lint on ui_client
+        uses: golangci/golangci-lint-action@v3
+        with:
+          working-directory: ui_client
+
+      - name: Run golangci-lint on user-service
+        uses: golangci/golangci-lint-action@v3
+        with:
+          working-directory: user-service
